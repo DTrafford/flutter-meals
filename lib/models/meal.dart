@@ -4,6 +4,18 @@ enum Complexity { Simple, Challenging, Hard }
 
 enum Affordability { Affordable, Average, Pricey, Luxurious }
 
+extension ComplexityToString on Complexity {
+  String toShortString() {
+    return this.toString().split('.').last;
+  }
+}
+
+extension AffordabilityToString on Affordability {
+  String toShortString() {
+    return this.toString().split('.').last;
+  }
+}
+
 class Meal {
   final String id;
   final List<String> categories;
